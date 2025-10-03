@@ -6,14 +6,17 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct ContentView: View {
+    let iosVersion = UIDevice.current.systemVersion
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Current iOS Version:")
+            Text(iosVersion)
+                .font(.title)
+                .fontWeight(.bold)
         }
         .padding()
     }
